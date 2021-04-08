@@ -7,8 +7,8 @@ ion-menu-button {
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10%;
+  // transform: translateY(-50%);
 }
 
 #container strong {
@@ -25,4 +25,7 @@ ion-menu-button {
 
 #container a {
   text-decoration: none;
+}
+ion-card {
+  width: 100%;
 }

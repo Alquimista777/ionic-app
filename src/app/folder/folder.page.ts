@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { TratamientoService } from '../core/services/tratamiento.service';
 
 @Component({
   selector: 'app-folder',
@@ -9,10 +10,22 @@ import { ActivatedRoute } from '@angular/router';
 export class FolderPage implements OnInit {
   public folder: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  public itemList = [];
+  constructor(
+    private router: Router,
+    private tratamientoService: TratamientoService,
+
+    ) { }
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    this.itemList = this.tratamientoService.getTratamientos();
+  }
+  onVerTratamiento(id: number) {
+    this.router.navigate(['/tratamiento', id])
+  }
+
+  onItemClick(item: any) {
+    
   }
 
 }

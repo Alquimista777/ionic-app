@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-slides>
+    <ion-slide *ngFor="let slide of slides" fxLayout="column">
+      <ion-grid>
+        <ion-col>
+          <ion-row>
+            <ion-col>
+              <img [src]="slide.imgUrl"/>
+              <h2>{{slide.titulo}}</h2>
+              <p>{{slide.descripcion}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-text-center">
+            <ion-button *ngIf="slide.btn" expand="block"  fill="clear" (click)="onTerminarIntro()">Continuar <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+          </ion-row>
+        </ion-col>
+    </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

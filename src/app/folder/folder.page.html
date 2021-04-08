@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>Postcovid rehabilitation</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +15,23 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- List of Text Items -->
+<ion-list>
+  <ion-item *ngFor="let item of itemList; index as indice" (click)="onItemClick(item)">
+    <ion-card>      
+      <ion-card-header>
+        <ion-avatar slot="start">
+          <ion-img src="/assets/img/covid-19.jpg"></ion-img>
+        </ion-avatar>
+        <ion-card-title> {{indice + 1}} {{item.name}}</ion-card-title>
+        <ion-card-subtitle>Secuela</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{item.descripcion}}
+      </ion-card-content>
+      <ion-button fill="clear" (click)="onVerTratamiento(item.id)">More <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-card>
+  </ion-item>
+</ion-list>
   </div>
 </ion-content>
