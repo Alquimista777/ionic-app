@@ -1,0 +1,42 @@
+ion-title {
+    a {  
+        font-size: 2.3vh;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+      }
+}
+
+.title {
+    font-size: large;
+    font-weight: bold;
+    color: black;
+}
+
+.subTitle {
+    font-size: 1.7vh;
+    color: black;
+    text-align: justify;
+}
+
+p {
+    font-size: 1.5vh;
+
+}
+.espacio {
+    margin: 0px 5px;
+    gap: 10px;
+}
+
+ion-img {
+    width: 100%;
+}
+
+ion-button {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    background-color: rgb(2, 151, 154);
+    color: white;
+}

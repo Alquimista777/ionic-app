@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { IntroCanDdeactivateGuard } from './core/guard/intro-can-ddeactivate.guard';
 import { IntroGuard } from './core/guard/intro.guard';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/folder',
-    pathMatch: 'full'
-  },
+  
   {
     path: 'folder',
     canActivate: [IntroGuard],
@@ -15,6 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'intro',
+    canActivate: [IntroCanDdeactivateGuard],
     loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
   },
   {

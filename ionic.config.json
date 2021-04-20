@@ -1,5 +1,7 @@
 {
   "name": "stop-covid",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

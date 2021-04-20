@@ -7,15 +7,19 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class StorageService {
   private _storage: Storage | null = null;
-
+  isFirstTime: boolean;
   constructor(private storage: Storage) {
     this.init();
   }
-
+  
   async init() {
     // If using, define drivers here: await this.storage.defineDriver(/*...*/);
-    const storage = await this.storage.create();
-    this._storage = storage;
+    this._storage = await this.storage.create();
+    this._storage.set('isFirstTime', true);
+  }
+
+  async isFirstTimeLoaded() {
+    return await this._storage.get('isFirstTime');
   }
 
   // Create and expose methods that users of this service can

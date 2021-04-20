@@ -1,5 +1,5 @@
 {
-  "appId": "sc.app.com",
+  "appId": "io.ionic.starter",
   "appName": "stop-covid",
   "bundledWebRuntime": false,
   "npmClient": "npm",

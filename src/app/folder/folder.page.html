@@ -15,23 +15,25 @@
   </ion-header>
 
   <div id="container">
-    <!-- List of Text Items -->
-<ion-list>
-  <ion-item *ngFor="let item of itemList; index as indice" (click)="onItemClick(item)">
-    <ion-card>      
-      <ion-card-header>
-        <ion-avatar slot="start">
-          <ion-img src="/assets/img/covid-19.jpg"></ion-img>
-        </ion-avatar>
-        <ion-card-title> {{indice + 1}} {{item.name}}</ion-card-title>
-        <ion-card-subtitle>Secuela</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        {{item.descripcion}}
-      </ion-card-content>
-      <ion-button fill="clear" (click)="onVerTratamiento(item.id)">More <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
-    </ion-card>
-  </ion-item>
-</ion-list>
+    <p class="ion-padding ion-text-left"><a href="">TRAINING PLANS</a></p>
+    <ion-list>
+      <ion-item lines="none" *ngFor="let item of itemList; index as indice" (click)="onVerTratamiento(item.id)">
+        <ion-card [ngStyle]="{'background-image':'url('+item.img+')'}">
+          <div class="transparente">
+            <ion-grid>
+              <ion-col class="ion-align-items-end"> 
+                <ion-card-header>
+                  <div class="free-plan">FREE PLAN</div>
+                  <ion-card-title>{{item.name | uppercase}}</ion-card-title>
+                  <ion-card-subtitle>{{item.subTitile}}</ion-card-subtitle>
+                  <p></p>
+                  <p></p>
+                </ion-card-header>
+              </ion-col>
+            </ion-grid>
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>

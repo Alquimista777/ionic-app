@@ -28,4 +28,39 @@ ion-menu-button {
 }
 ion-card {
   width: 100%;
+  height: auto;
+}
+
+ion-card {
+  box-shadow: 2px 2px 2px 1px rgba(84, 44, 44, 0.2);
+  background-size: cover;
+}
+
+.transparente{
+  height: 150px;
+	background:rgba(0, 0, 0, 0.201);
+}
+
+a {  
+  font-size: 2.3vh;
+  color: black;
+  font-weight: bold;
+}
+ion-card-subtitle {
+  font-size: 1.5vh;
+  color: white;
+}
+
+.free-plan {
+  padding: 3px 5px;
+  font-weight: bold;
+  display: inline;
+  color: white;
+  font-size: x-small;
+  background-color: rgb(2, 151, 154);
+}
+ion-card-title {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5vh;
 }

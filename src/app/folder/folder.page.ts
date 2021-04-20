@@ -18,6 +18,8 @@ export class FolderPage implements OnInit {
     ) { }
 
   ngOnInit() {
+    console.log('APP FOLDER');
+
     this.itemList = this.tratamientoService.getTratamientos();
   }
   onVerTratamiento(id: number) {
@@ -26,6 +28,12 @@ export class FolderPage implements OnInit {
 
   onItemClick(item: any) {
     
+  }
+
+  onBack() {
+    console.log('BACK');
+    
+    this.router.navigateByUrl('/intro')
   }
 
 }
