@@ -14,7 +14,7 @@ const routes: Routes = [
     loadChildren: () => import('./intro/intro.module').then(m => m.IntroPageModule)
   },
   {
-    path: 'tratamiento/:id',
+    path: 'tratamiento/:id/:id2',
     loadChildren: () => import('./tratamiento/tratamiento.module').then(m => m.TratamientoPageModule)
   },
   {

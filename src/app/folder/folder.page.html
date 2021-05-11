@@ -30,7 +30,7 @@
                 <ion-col size="2"><p><a href="">VER MAS</a></p></ion-col>
               </ion-row>
               <ion-slides [options]="slideOpts">
-                <ion-slide *ngFor="let item of slide.tratamientos index as indice" (click)="onVerTratamiento(item.id)">
+                <ion-slide *ngFor="let item of slide.tratamientos index as indice" (click)="onVerTratamiento(slide.id, item.id)">
                   <ion-card [ngStyle]="{'background-image':'url('+item.img+')'}">
                     <div class="transparente">
                       <ion-grid>

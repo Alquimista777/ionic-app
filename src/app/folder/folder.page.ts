@@ -28,8 +28,8 @@ export class FolderPage implements OnInit {
   ngOnInit() {
 
   }
-  onVerTratamiento(id: number) {
-    this.router.navigate(['/tratamiento', id])
+  onVerTratamiento(idSlide: number, idTratamiento) {
+    this.router.navigate(['/tratamiento',  idSlide, idTratamiento])
   }
 
   onItemClick(item: any) {
