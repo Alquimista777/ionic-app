@@ -35,10 +35,11 @@ export class FolderPage implements OnInit {
   onItemClick(item: any) {
     
   }
+  onVerMas(idSlide) {
+   this.router.navigate(['/mostrar-mas', idSlide])
+  }
 
   onBack() {
-    console.log('BACK');
-    
     this.router.navigateByUrl('/intro')
   }
 

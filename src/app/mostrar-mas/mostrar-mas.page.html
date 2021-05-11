@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="onRegresarMenuPrincipal()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      <a>MOSTRAR MÁS</a>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <p class="ion-padding ion-text-left"><a href="">PLANS</a></p>
+    <ion-list>
+      <ion-item lines="none" *ngFor="let item of tratamiento; index as indice"  (click)="onVerTratamiento(idSlide, item.id)">
+        <ion-card [ngStyle]="{'background-image':'url('+item.img+')'}">
+          <div class="transparente">
+            <ion-grid>
+              <ion-col class="ion-align-items-end"> 
+                <ion-card-header>
+                  <div class="free-plan">FREE PLAN</div>
+                  <ion-card-title class="titulo-card">{{item.name | uppercase}}</ion-card-title>
+                  <ion-card-subtitle class="subTitle-card">{{item.subTitile}}</ion-card-subtitle>
+                  <p></p>
+                  <p></p>
+                </ion-card-header>
+              </ion-col>
+            </ion-grid>
+          </div>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+</ion-content>

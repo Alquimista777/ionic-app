@@ -18,11 +18,20 @@ const routes: Routes = [
     loadChildren: () => import('./tratamiento/tratamiento.module').then(m => m.TratamientoPageModule)
   },
   {
+    path: 'mostrar-mas/:id',
+    loadChildren: () => import('./mostrar-mas/mostrar-mas.module').then(m => m.MostrarMasPageModule)
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: '/intro',
     
   },
+  {
+    path: 'mostrar-mas',
+    loadChildren: () => import('./mostrar-mas/mostrar-mas.module').then( m => m.MostrarMasPageModule)
+  },
+
 
 ];
 @NgModule({
