@@ -18,10 +18,9 @@ export class TratamientoPage implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.itemList = this.tratamientoService.getTratamientos();
    this.tratamiento = this.itemList.find(item => item.id === +this.activatedRoute.snapshot.paramMap.get('id'))
   }
   onRegresarMenuPrincipal() {
-    this.router.navigateByUrl('/folder')
+    this.router.navigateByUrl('/tabs/ejercicio')
   }
 }

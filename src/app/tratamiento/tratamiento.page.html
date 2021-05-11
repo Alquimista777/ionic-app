@@ -10,11 +10,12 @@
 </ion-header>
 <ion-content [fullscreen]="true">
   <ion-grid>
-    <ion-col>
-        <ion-img [src]="tratamiento.img"></ion-img>
+    <ion-row>
+      <ion-col>
+        <!-- <ion-img [src]="tratamiento.img"></ion-img> -->
       <ion-row>
         <ion-col>
-          <p class="title">{{tratamiento.name |uppercase}}</p>
+          <h5 class="title">{{tratamiento.name |uppercase}}</h5>
           <p class="subTitle">{{tratamiento.descripcionLarga}}</p>
         </ion-col>
       </ion-row>
@@ -88,4 +89,5 @@
           </ion-grid>
           </section>
     </ion-col>
+    </ion-row>
   </ion-grid>

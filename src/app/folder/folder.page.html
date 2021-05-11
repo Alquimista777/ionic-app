@@ -1,39 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Postcovid rehabilitation</ion-title>
+    <ion-title>EJERCICIOS</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <p class="ion-padding ion-text-left"><a href="">TRAINING PLANS</a></p>
-    <ion-list>
-      <ion-item lines="none" *ngFor="let item of itemList; index as indice" (click)="onVerTratamiento(item.id)">
-        <ion-card [ngStyle]="{'background-image':'url('+item.img+')'}">
+  <ion-grid>
+    <ion-col>
+      <ion-row>
+        <p><strong>TRAINING PLANS</strong></p>
+      </ion-row>
+      <ion-row>
+        <ion-card [ngStyle]="{'background-image':'url('+'/assets/img/nurse.jpg'+')'}">
           <div class="transparente">
-            <ion-grid>
-              <ion-col class="ion-align-items-end"> 
-                <ion-card-header>
-                  <div class="free-plan">FREE PLAN</div>
-                  <ion-card-title>{{item.name | uppercase}}</ion-card-title>
-                  <ion-card-subtitle>{{item.subTitile}}</ion-card-subtitle>
-                  <p></p>
-                  <p></p>
-                </ion-card-header>
-              </ion-col>
-            </ion-grid>
+            <ion-card-header>
+              <ion-card-title class="ion-text-left titulo-card">¿COMENZAMOS?</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p class="subTitle-card">Con esta aplicación buscamos ayudar a la población que se ha visto mas afectada con la COVID 19 después de adquirir esta enfermedad y requieren de una rehabilitación para mejorar el correcto funcionamiento de sus diferentes sistemas. </p>
+            </ion-card-content>
           </div>
         </ion-card>
-      </ion-item>
-    </ion-list>
-  </div>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <ion-row *ngFor="let slide of tratamientoService.getSlides().slides" class="slides-secction">
+              <ion-row class="ion-justify-content-between title-slides">
+                <ion-col size="10"><p> <strong>{{ slide.nombre }}</strong> </p></ion-col>
+                <ion-col size="2"><p><a href="">VER MAS</a></p></ion-col>
+              </ion-row>
+              <ion-slides [options]="slideOpts">
+                <ion-slide *ngFor="let item of slide.tratamientos index as indice" (click)="onVerTratamiento(item.id)">
+                  <ion-card [ngStyle]="{'background-image':'url('+item.img+')'}">
+                    <div class="transparente">
+                      <ion-grid>
+                        <ion-col class="ion-align-items-end"> 
+                          <ion-card-header>
+                            <div class="free-plan">FREE PLAN</div>
+                            <ion-card-title class="titulo-card">{{item.name | uppercase}}</ion-card-title>
+                            <ion-card-subtitle class="subTitle-card">{{item.subTitile}}</ion-card-subtitle>
+                            <p></p>
+                            <p></p>
+                          </ion-card-header>
+                        </ion-col>
+                      </ion-grid>
+                    </div>
+                  </ion-card>
+                </ion-slide>
+              </ion-slides>
+            </ion-row>
+          </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-grid>
 </ion-content>

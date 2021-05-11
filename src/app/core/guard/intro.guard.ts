@@ -14,7 +14,8 @@ export class IntroGuard implements CanActivate {
   ){}
 
   async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> {
-    const isFirstTime = await this.storageService.get('isFirstTime'); 
+    const isFirstTime = false;
+    // const isFirstTime = await this.storageService.get('isFirstTime'); 
     if (!isFirstTime) {
       return true;
     } else {

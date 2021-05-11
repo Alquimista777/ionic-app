@@ -8,9 +8,17 @@ import { TratamientoService } from '../core/services/tratamiento.service';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
+  slideOpts = {
+    slidesPerView: 1.2,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    }
+  }
   public folder: string;
-
-  public itemList = [];
   constructor(
     private router: Router,
     private tratamientoService: TratamientoService,
@@ -18,9 +26,7 @@ export class FolderPage implements OnInit {
     ) { }
 
   ngOnInit() {
-    console.log('APP FOLDER');
 
-    this.itemList = this.tratamientoService.getTratamientos();
   }
   onVerTratamiento(id: number) {
     this.router.navigate(['/tratamiento', id])
