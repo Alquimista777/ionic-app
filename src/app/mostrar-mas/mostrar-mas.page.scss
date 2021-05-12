@@ -1,42 +1,13 @@
-.borde {
-    border-top: green solid 1px;
+ 
+  .titulo-card {
+    color: white;
+    font-weight: bold;
+    font-size: 1.8vh;
   }
-  .title-slides {
-    width: 100%;
-  }
-  .slides-secction{
-    border-top: 1px solid grey;
-    margin: 5px 0;
-  }
-  ion-menu-button {
-    color: var(--ion-color-primary);
-  }
-  ion-content {
-    background-color: #f7f7f7;
-  }
-  
-  ion-card {
-    width: auto;
-    height: auto;
-  }
-  
-  ion-card {
-    box-shadow: 2px 2px 2px 1px rgba(84, 44, 44, 0.2);
-    background-size: cover;
-  }
-  
-  .transparente{
-    height: 150px;
-      background:rgba(0, 0, 0, 0.201);
-  }
-  
-  a {
-    text-decoration: none;
-    font-size: 2vh;
-  }
-  ion-card-subtitle {
-    font-size: 1vh;
-    color: black;
+
+  .subTitle-card {
+    font-size: 1.2vh;
+    color: white;
   }
   
   .free-plan {
@@ -47,17 +18,15 @@
     font-size: x-small;
     background-color: rgb(2, 151, 154);
   }
-  .titulo-card {
-    color: white;
-    font-weight: bold;
-    font-size: 1.8vh;
+
+  .transparente{
+    height: 150px;
+    width: 100%;
+      background:rgba(0, 0, 0, 0.201);
   }
-  .subTitle-card {
-    font-size: 1.2vh;
-    color: white;
-  }
-  ion-card-title {
-    color: back;
-    font-weight: bold;
-    font-size: 2vh;
+  
+  ion-card {
+    box-shadow: 2px 2px 2px 1px rgba(84, 44, 44, 0.2);
+    background-size: cover;
+    width: 100%;
   }

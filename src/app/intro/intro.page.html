@@ -8,7 +8,7 @@
         <ion-col>
           <ion-row>
             <ion-col>
-              <img src="/assets/img/covid-19.jpg"/>
+              <img *ngIf="slide.img" src="/assets/img/covid-19.jpg"/>
               <h2>{{slide.titulo}}</h2>
               <p>{{slide.descripcion}}</p>
             </ion-col>
