@@ -37,14 +37,14 @@
         </p>
     
           <ion-list>
-            <ion-item *ngFor="let plan of tratamiento.planSemanal">
+            <ion-item *ngFor="let plan of tratamiento.planSemanal" (click)="onVerDetalle(plan.id)">
               <ion-avatar slot="start">
                 <img [src]="'/assets/img/man-sick.jpg'">
               </ion-avatar>
               <ion-label>
                 <h2>{{plan.nombre}}</h2>
                 <h3>Tratamiento</h3>
-                <p>{{plan.detalle}}</p>
+                <p>{{plan.detalle | slice:0:50}}...</p>
               </ion-label>
             </ion-item>
           </ion-list>

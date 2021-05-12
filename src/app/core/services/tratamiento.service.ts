@@ -24,13 +24,15 @@ export class TratamientoService {
                 planSemanal: [
                   {
                     id: 1,
+                    nivel: 'basico',
                     nombre: 'Respiración completa',
-                    detalle: 'Coloque la mano izquierda sobre su abdomen y la derecha...'
+                    detalle: 'Coloque la mano izquierda sobre su abdomen y la derecha sobre su pecho, observe como se mueven las manos al inhalar y exhalar. La mano que se encuentra en el abdomen suba cuando inhala y la mano que esta en el pecho se quede quieta, Recuerde inhalar por la nariz y exhalar por la boca. ',
                   },
                   {
                     id: 2,
+                    nivel: 'basico',
                     nombre: 'Estiramiento de la pared torácica',
-                    detalle: 'Inhale por la nariz contando hasta 4...'
+                    detalle: 'Inhale por la nariz contando hasta 4, eleve y estire los brazos hacia adelante sobre su cabeza; exhale con los labios fruncidos, aleje las palmas de las manos y baje los brazos a los costados, repetir cuatro veces. ',
                   }
                 ],
                },
@@ -50,17 +52,23 @@ export class TratamientoService {
                   {
                     id: 1,
                     nombre: 'Caminar',
-                    detalle: 'Semana 1, 5 minutos 5 veces al día...'
+                    nivel: 'basico',
+                    detalle: `Semana 1, 5 minutos 5 veces al día
+                    Semana 2, 10 minutos 3 veces al día 
+                    Semana 3, 15 minutos 2 veces al día 
+   `
                   },
                   {
                     id: 2,
+                    nivel: 'basico',
                     nombre: 'Marcha de pie',
-                    detalle: ': Al estar de pie levantar la rodilla manteniéndola durante...'
+                    detalle: `Al estar de pie levantar la rodilla manteniéndola durante 2 segundos en el aire, bajarla y alternar con la otra, si necesita usar uno o los dos brazos como apoyo, realizarlo durante 30 segundos y descansar 30 segundos, realizar 5 series. `
                   },
                   {
                     id: 3,
+                    nivel: 'basico',
                     nombre: 'Pasos laterales',
-                    detalle: 'Estando de pie dar un paso lateral hacia un lado...'
+                    detalle: `: Estando de pie dar un paso lateral hacia un lado, seguir con la otra pierna, recuerda mantener una postura y posición adecuada, repetir 5 pasos en una dirección y luego cambiar de dirección; repetir durante 30 segundos.`
                   }
                 ], 
               },
@@ -76,13 +84,15 @@ export class TratamientoService {
                 planSemanal: [
                   {
                     id: 1,
+                    nivel: 'basico',
                     nombre: 'Al estar sentado ',
-                    detalle: 'estirar la rodilla a 90º y realizar movimientos del pie hacia arriba y hacia abajo...'
+                    detalle: 'Estirar la rodilla a 90º y realizar movimientos del pie hacia arriba y hacia abajo '
                   },
                   {
                     id: 2,
+                    nivel: 'basico',
                     nombre: 'Al estar de pie',
-                    detalle: 'levantarse en los dedos del pie mientras levanta los talones lo mas alto posible...'
+                    detalle: 'Levantarse en los dedos del pie mientras levanta los talones lo mas alto posible, pausa dos segundos, baja los talones y repite este movimiento arriba y abajo durante 30 segundos. '
                   }
                 ],
                },
@@ -96,8 +106,9 @@ export class TratamientoService {
                    planSemanal: [
                     {
                       id: 1,
+                    nivel: 'basico',
                       nombre: 'Ejercicios de potenciación',
-                      detalle: 'Realizar un trote lento durante 20 segundos e ir aumentado ...'
+                      detalle: 'Realizar un trote lento durante 20 segundos e ir aumentado el tiempo a medida que se sienta a gusto.'
                     },
                   ],
                   },      //   { id: 4, img:'/assets/img/psicologica.jpg', name: 'Trastornos psicológicos', icon: 'home', subTitile: 'La fisioterapia en salud mental ayuda a mejorar las capacidades funcionales de las personas.', descripcionLarga: `Una amplia variedad de afecciones que afectan el estado de ánimo, el pensamiento y el comportamiento.` },

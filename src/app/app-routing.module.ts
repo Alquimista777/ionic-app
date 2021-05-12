@@ -28,9 +28,10 @@ const routes: Routes = [
     
   },
   {
-    path: 'mostrar-mas',
-    loadChildren: () => import('./mostrar-mas/mostrar-mas.module').then( m => m.MostrarMasPageModule)
+    path: 'detalle-tratamiento/:id/:id2/:id3',
+    loadChildren: () => import('./detalle-tratamiento/detalle-tratamiento.module').then( m => m.DetalleTratamientoPageModule)
   },
+
 
 
 ];

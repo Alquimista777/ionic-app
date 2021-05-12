@@ -10,6 +10,8 @@ import { TratamientoService } from '../core/services/tratamiento.service';
 export class TratamientoPage implements OnInit {
   tratamiento: any;
   tratamient
+  idSlide: number = 0;
+  idTratamiento: number = 0;
   itemList = []
   constructor(
     private router: Router,
@@ -19,12 +21,15 @@ export class TratamientoPage implements OnInit {
 
   ngOnInit() {
     this.itemList = this.tratamientoService.getSlides().slides;
-    const idSlide =  +this.activatedRoute.snapshot.paramMap.get('id');
-    const idTratamiento =  +this.activatedRoute.snapshot.paramMap.get('id2');
-   this.tratamiento = this.itemList.find(slides => slides.id === idSlide).tratamientos.find(item => item.id === idTratamiento)
+    this.idSlide =  +this.activatedRoute.snapshot.paramMap.get('id');
+    this.idTratamiento =  +this.activatedRoute.snapshot.paramMap.get('id2');
+   this.tratamiento = this.itemList.find(slides => slides.id === this.idSlide).tratamientos.find(item => item.id === this.idTratamiento)
    
   }
   onRegresarMenuPrincipal() {
     this.router.navigateByUrl('/tabs/ejercicio')
+  }
+  onVerDetalle(id: number) {
+    this.router.navigate(['/detalle-tratamiento', this.idSlide, this.idTratamiento, id])
   }
 }
