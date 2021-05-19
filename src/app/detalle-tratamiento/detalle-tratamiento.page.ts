@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SecurityContext } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TratamientoService } from '../core/services/tratamiento.service';
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
@@ -13,7 +13,7 @@ export class DetalleTratamientoPage implements OnInit {
   tratamient
   idSlide: number = 0;
   idTratamiento: number = 0;
-  videourl = 'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4';
+  videourl = '/assets/video/Background.mp4';
   itemList = []
   constructor(   
      private router: Router,
@@ -23,11 +23,6 @@ export class DetalleTratamientoPage implements OnInit {
     private tratamientoService: TratamientoService,) { }
 
   ngOnInit() {
-    // this.videoPlayer.play('https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4').then(() => {
-    //   console.log('video completed');
-    //   }).catch(err => {
-    //   console.log('ERORRRR',err);
-    //   });
 
     this.itemList = this.tratamientoService.getSlides().slides;
     this.idSlide =  +this.activatedRoute.snapshot.paramMap.get('id');

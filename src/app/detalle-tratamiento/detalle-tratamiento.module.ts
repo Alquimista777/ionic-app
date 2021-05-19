@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DetalleTratamientoPageRoutingModule } from './detalle-tratamiento-routing.module';
 
 import { DetalleTratamientoPage } from './detalle-tratamiento.page';
+import { UrlVideoPipe } from '../url-video.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { DetalleTratamientoPage } from './detalle-tratamiento.page';
     IonicModule,
     DetalleTratamientoPageRoutingModule
   ],
-  declarations: [DetalleTratamientoPage]
+  declarations: [
+    DetalleTratamientoPage,
+    UrlVideoPipe
+  ]
 })
 export class DetalleTratamientoPageModule {}

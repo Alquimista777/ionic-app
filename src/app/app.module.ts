@@ -9,10 +9,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UrlVideoPipe } from './url-video.pipe';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, UrlVideoPipe],
   entryComponents: [],
   imports: [
     BrowserModule,
