@@ -1,9 +1,32 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>noticias</ion-title>
+    <ion-title>NOTICIAS</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <div class="transparente">
+    <img src="/assets/img/twitter.jpg">
+  </div>
+  <p><strong>COVID-19: ¿Cómo cuidarse?</strong></p>
+  <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let item of slides" (click)=onAbrirUrl(item.url)>
+      <ion-card [ngStyle]="{'background-image':'url('+item.img+')'}">
+        <div class="transparente">
+          <ion-grid>
+            <ion-col class="ion-align-items-end"> 
+              <ion-card-header>
+                <ion-card-title class="titulo-card"> <p><a [href]="item.url">{{item.descripcion | uppercase}}</a> </p></ion-card-title>
+                <p></p>
+                <p></p>
+              </ion-card-header>
+            </ion-col>
+          </ion-grid>
+        </div>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <ul>
+    <li *ngFor="let item of lista"> <a [href]="item.url">{{item.descripcion}}</a> </li>
+  </ul>
+ 
 </ion-content>

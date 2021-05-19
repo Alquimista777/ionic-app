@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'detalle-tratamiento/:id/:id2/:id3',
     loadChildren: () => import('./detalle-tratamiento/detalle-tratamiento.module').then( m => m.DetalleTratamientoPageModule)
+  },  {
+    path: 'covid',
+    loadChildren: () => import('./covid/covid.module').then( m => m.CovidPageModule)
   },
+
 
 
 
